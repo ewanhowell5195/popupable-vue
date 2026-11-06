@@ -1,0 +1,50 @@
+{
+  "name": "popupable-vue",
+  "version": "0.1.0",
+  "description": "A Vue 3 component and directives for popupable, with slot content and reactive options.",
+  "author": "Ewan Howell <ewanhowell5195>",
+  "license": "MPL-2.0",
+  "type": "module",
+  "main": "./dist/popupable-vue.min.js",
+  "types": "./types/popupable-vue.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/popupable-vue.d.ts",
+      "default": "./dist/popupable-vue.min.js"
+    }
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewanhowell5195/popupable-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ewanhowell5195/popupable-vue/issues"
+  },
+  "homepage": "https://popupable.ewanhowell.com/",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "popupable": "^1.11.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "terser": "^5.43.1"
+  },
+  "keywords": [
+    "popupable",
+    "vue",
+    "vue3",
+    "vue-component",
+    "vue-directive",
+    "lightbox",
+    "image-viewer",
+    "gallery"
+  ]
+}
