@@ -38,7 +38,7 @@ export interface PopupableOptions extends PopupableGroupOptions {
   disabled?: boolean
 }
 
-export interface PopupableEmits {
+export type PopupableEmits = {
   open: (detail: PopupableEventDetail) => void
   switch: (detail: PopupableSwitchDetail) => void
   close: (detail: PopupableEventDetail) => void
@@ -53,6 +53,8 @@ export const vPopupable: ObjectDirective<HTMLElement, PopupableDirectiveValue>
 export const vPopupableGroup: ObjectDirective<HTMLElement, PopupableGroupDirectiveValue>
 
 export function popupableAttrs(options?: PopupableOptions): Record<string, string | undefined>
+
+export function setPopupableDefaults(options?: Omit<PopupableGroupOptions, "group">): void
 
 declare const Popupable: DefineComponent<PopupableOptions, {}, {}, {}, {}, {}, {}, PopupableEmits>
 

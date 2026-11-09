@@ -139,6 +139,18 @@ Navigate with arrow buttons, swipe gestures, the scroll wheel, or the keyboard:
 
 Only the slides near the active one are kept loaded, so large galleries are fine.
 
+## Defaults
+
+`setPopupableDefaults` sets [options](#options) for every popup on the page. A popup's own options and its group's options take priority over them:
+
+```js
+import { setPopupableDefaults } from "popupable-vue"
+
+setPopupableDefaults({ looping: true, order: ["content", "image", "counter", "thumbnails"] })
+```
+
+Each call replaces the previous defaults. `group` can't be set as a default.
+
 ## Options
 
 These are props on `<Popupable>`, and keys of the `v-popupable` and `v-popupable-group` objects. Use the kebab-case name of a prop in a template, eg `no-upscale`.

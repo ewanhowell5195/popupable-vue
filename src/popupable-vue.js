@@ -31,6 +31,10 @@ function setAttrs(el, attrs) {
   }
 }
 
+export function setPopupableDefaults(options = {}) {
+  setAttrs(document.documentElement, optionAttrs({ ...options, group: undefined }))
+}
+
 function applyDirective(el, { value }) {
   if (value === false || value === null) setAttrs(el, popupableAttrs({ disabled: true }))
   else if (typeof value === "string" || typeof value === "number") setAttrs(el, popupableAttrs({ title: value }))
